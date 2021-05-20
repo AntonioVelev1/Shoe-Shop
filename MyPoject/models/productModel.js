@@ -26,7 +26,11 @@ const productSchema = new mongoose.Schema({
     description: {
         String,
     },
-    userId: {
+    sallesman: {
+        type: ObjectId,
+        required: true
+    },
+    buyers: {
         type: ObjectId,
         ref: 'User'
     }
